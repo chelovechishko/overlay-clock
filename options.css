@@ -1,20 +1,36 @@
 html {
-	font-family: sans-serif;
-	color: #00675c;
-	background: "white";
-	border-radius:6px; /* regular */
+	min-width: 250px;
 }
 
-h1 {
-	color: #1e776d;
+body {
+	font-family: 'Anonymous Pro', monospace;
+	color: #168007;
+	background: #000000;
+	border-radius:6px;
+	font-size: 16px;
+	padding: 0 0 0 3px;
 }
 
 button {
-	color: white;
+	color: #c0c0c0;
 	border: 0px;
-	background-color: #009e8e;
+	background-color: #363636;
 	padding-top:12px;
 	padding-bottom:12px;
 	padding-right:18px;
 	padding-left:18px;
+}
+
+#bg-opacity,#font_size,#font_family,#style_right,#style_top {
+	background-color: #202020;
+	border: 0;
+	border-radius: 3px;
+	color: #168007;
+	font-family: 'Anonymous Pro', monospace;
+	font-size: 16px;
+	width: 160px;
+}
+
+.color {
+	background-color: #292929;
 }
