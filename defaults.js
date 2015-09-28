@@ -1,5 +1,4 @@
 document.clock_defaults = {
-	"fullscreen_only": false,
 	"mil_time": true,
 	"fg_color": "#C0C0C0",
 	"bg_color": "#000000",

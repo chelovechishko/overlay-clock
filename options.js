@@ -1,6 +1,5 @@
 // Saves options to localStorage.
 function save_options() {
-	var fullscreen_only = document.getElementById("fullscreen-only").checked;
 	var mil_time = document.getElementById("mil-time").checked;
 	var fg_color = document.getElementById("fg-color").value;
 	var bg_color = document.getElementById("bg-color").value;
@@ -11,7 +10,6 @@ function save_options() {
 	var style_top = document.getElementById("style_top").value;
 
 	chrome.storage.sync.set({
-		"fullscreen_only": fullscreen_only,
 		"mil_time": mil_time,
 		"fg_color": fg_color,
 		"bg_color": bg_color,
@@ -32,7 +30,6 @@ function save_options() {
 // Restores options dialog state to saved value from localStorage.
 function restore_options() {
 	chrome.storage.sync.get(document.clock_defaults, function(values) {
-		document.getElementById("fullscreen-only").checked = values["fullscreen_only"];
 		document.getElementById("mil-time").checked = values["mil_time"];
 		document.getElementById("fg-color").value = values["fg_color"];
 		document.getElementById("bg-color").value = values["bg_color"];
