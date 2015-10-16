@@ -58,12 +58,11 @@ function create_clock(values) {
 	overlay_clock.style.top = my_overlay_clock_style_top;
 }
 
-function call_update_time_on_clock() {
-	setTimeout(function() { overlay_clock.textContent = new_time(); }, 10000);
-	setTimeout(call_update_time_on_clock, 10000);
+function update_time_on_clock() {
+	overlay_clock.textContent = new_time();
 }
+
+setInterval(update_time_on_clock, 20000);
 
 // Load defaults values and transfer them to function create_clock()
 chrome.storage.sync.get(document.clock_defaults, create_clock);
-
-call_update_time_on_clock();
